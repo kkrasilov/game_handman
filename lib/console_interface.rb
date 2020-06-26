@@ -1,3 +1,4 @@
+# Класс вывода информации в консоль.
 class ConsoleInterface
   FIGURES =
       Dir[__dir__ + '/../data/figures/*.txt'].
@@ -18,14 +19,14 @@ class ConsoleInterface
     END
 
     if @game.won?
-      puts "Поздравляем, вы выиграли!"
+      puts 'Поздравляем, вы выиграли!'
     elsif @game.lost?
       puts "Вы проиграли, загаданное слово: #{@game.word}"
     end
   end
 
   def figure
-    return FIGURES[@game.errors_made]
+    FIGURES[@game.errors_made]
   end
 
   def word_to_show
@@ -38,16 +39,16 @@ class ConsoleInterface
         end
       end
 
-    return result.join(' ')
+    result.join(' ')
   end
 
   def errors_to_show
-    return @game.errors.join(', ')
+    @game.errors.join(', ')
   end
 
   def get_input
-    print "Введите следующую букву: "
+    print 'Введите следующую букву: '
     letter = gets[0].upcase
-    return letter
+    letter
   end
 end
