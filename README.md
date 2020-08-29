@@ -29,10 +29,16 @@
 
 Для корректной работы программы на вашем компьютере должен быть установлен [Ruby MRI](https://www.ruby-lang.org/en/).
 
+```
+$ git clone https://github.com/kkrasilov/game_hangman.git
+$ cd ./game_hangman
+$ bundle
+```
+
 ## Запуск
 
 Запуск осуществляется командой
 
 ```
-$ ruby main.rb
+$ bundle exec ruby main.rb
 ```

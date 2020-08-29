@@ -1,4 +1,6 @@
 # Класс вывода информации в консоль.
+require 'colorize'
+
 class ConsoleInterface
   FIGURES =
     Dir[__dir__ + '/../data/figures/*.txt']
@@ -11,9 +13,9 @@ class ConsoleInterface
 
   def print_out
     puts <<~END
-      Слово: #{word_to_show}
-      #{figure}
-      Ошибки (#{@game.errors_made}): #{errors_to_show}
+      #{"Слово: #{word_to_show}".light_blue}
+      #{figure.yellow}
+      #{"Ошибки (#{@game.errors_made}): #{errors_to_show}".red}
       У вас осталось ошибок: #{@game.errors_allowed}
 
     END
