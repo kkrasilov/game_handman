@@ -7,7 +7,7 @@
 
 ## Preview
 
-![game_interface](hangman_interface.gif)
+![game interface](hangman_interface.gif)
 
 ## Правила игры
 
